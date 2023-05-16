@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>float 예제3</title>
+		<style>
+			
+		#parent{
+			border:10px solid #000;
+			background:brown;
+			background-size:cover;			
+			}
+			
+		#parent1{
+			border:10px solid #f00;
+			width:300px; height:300px;
+			float:left;
+			}	
+			
+		#parent2{
+			border:10px solid #0f0;
+			width:300px; height:300px;
+			float:right;
+			}		
+			
+			
+		#parent1>div{width:100px; height:100px; }
+		#parent2>div{width:100px; height:100px;}
+		
+		#a{background:red;}
+		#b{background:orange;}
+		#c{background:yellow;}
+		#d{background:green; clear:both;}
+		#e{background:blue; clear:both;}		
+		#g{background:purple;}
+		#h{background:pink; clear:both;}
+		#i{background:gray;clear:both;}
+		#j{background:gold;}
+		#k{background:silver;}
+		
+		</style>
+	</head>
+	<body>
+		<div id="parent">
+			<div id="parent1">
+				<div id="a">a</div>
+				<div id="b">b</div>
+				<div id="c">c</div>
+				<div id="d">d</div>
+				<div id="e">e</div>
+			</div>	
+			<div id="parent2">
+				<div id="g">g</div>
+				<div id="h">h</div>
+				<div id="i">i</div>
+				<div id="j">j</div>
+				<div id="k">k</div>				
+			</div>
+		</div>
+	</body>
+</html>

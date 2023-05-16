@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17 애니메이션(p241)</title>
+
+    <style>
+        @keyframes title {
+            from{background: red;}
+            to{background: yellow;}
+            
+        }
+        
+        h2{font-size: 30px; color: #fff; padding: 10px; background: blue; 
+            animation-name:title ; /*애니메이션 지정*/
+            animation-duration: 3s; /*재생시간*/
+            animation-iteration-count: 5; /*반복횟수*/
+        
+        }
+
+        @keyframes move{
+            0%{transform: translate(100px, 100px); background: cyan;}
+            20%{transform: translate(200px, 100px);}
+            40%{transform: translate(200px, 0px);}
+            60%{transform: translate(300px, 0px);}
+            80%{transform: translate(300px, 100px);}
+            100%{transform: translate(400px, 100px); background: orangered;}
+        }
+
+        .this{width: 50px; height: 50px; background: gray;
+            animation-name:move ;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out; /*구간별 속도*/
+            /* ease(기본값), linear, ease-in, ease-out, ease-in-out, steps()*/
+            animation-delay: 3s; /*대기시간*/
+            animation-iteration-count: 5; /*반복횟수(infinite:무한반복)*/
+            animation-direction: alternate; /*재생방향*/
+            /*reverse(역방향), alternate(정-역), alternate-reverse(역-정)*/
+            animation-fill-mode: both; /*대기 중, 완료 후 스타일 유지여부*/
+            /* forwards(완료후), backwards(대기중), both(둘다) */
+
+            /*단축(축약) 작성
+            animation: 이름 재생시간 [속도] [대기시간] [반복횟수] [방향] [스타일];*/
+            animation: move 3s linear 0s infinite alternate both;
+        }
+
+
+        .this:hover{animation-play-state:paused; /*재생상태 제어*/}
+        /*running(재생중-기본값), paused(일시정지)*/
+
+    </style>
+</head>
+<body>
+    <h2>Animation</h2>
+    <p>시간의 흐름에 따라 여러 스타일로 점진적으로 변하는 애니메이션 효과를 생성한다.</p>
+    <div class="this"></div>
+</body>
+</html>

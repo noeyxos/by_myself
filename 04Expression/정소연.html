@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Create an account
+    </title>
+    <style>
+        table{display: flex; align-items: center; justify-content: center;}
+        table h1{float: left;}
+        #name{width: 100%; height: 30px; margin-top:10px; margin-bottom: 20px; background-color:whitesmoke; 
+        border: 1px solid gray; padding: 3px 5px;}
+        #address{width: 100%; height: 30px; margin-top:10px; margin-bottom: 20px; background-color:whitesmoke;
+            border: 1px solid gray; padding: 3px 5px;}
+        #password{width: 100%; height: 30px; margin-top:10px; margin-bottom: 20px; background-color:whitesmoke;
+            border: 1px solid gray; padding: 3px 5px;}       
+        #button{
+            width: 100%; color:aliceblue; background-color:gray; font-size: 18px;
+            border: none;
+            padding: 15px 30px; text-align: center; text-decoration: none; display: inline-block;
+            margin: 30px 2px; cursor: pointer;}
+    </style>
+</head>
+<body>  
+    <form name="frm" id="frm" method="post">
+    <table>
+    <th><h1>Create an account</h1></th>
+        <tr>
+            <td>
+            <b>Full Name</b>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <input type="text" name="Full Name" id="name" placeholder="ex.John Doe"
+            >
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <b>Email Address</b>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <input type="text" name="Email Address" id="address" placeholder="ex.Johndoe@gmail.com"
+            size ="50%">
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <b>Password</b>
+            </td>    
+        </tr>
+        <tr>
+            <td >
+            <input type="text" name="Password" id="password" placeholder="Min.5 characters"
+            size ="50%">
+            </td>
+        </tr>
+        <tr>
+            <td id="info">
+            By clicking "Create your account" below, you agree to <br/>
+            our terms of service and privacy policy.
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <button id="button" type="button" onclick="check();" >Create your account</button>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+<script>
+    function check(){
+    var name = document.getElementById("name");
+    var address = document.getElementById("address");
+    var password = document.getElementById("password");
+
+
+    if (name.value==""){
+        alert("이름을 입력하세요.");
+        name.focus;
+        return false;
+    }
+    
+    if (address.value==""){
+        alert("이메일 주소를 입력하세요.")
+        address.focus;
+        return false;
+    }
+    if (password.value==""){
+        alert("패스워드를 입력하세요.")
+        password.focus;
+        return false;
+    }
+
+    document.frm.submit();
+    }
+</script>
+</html>

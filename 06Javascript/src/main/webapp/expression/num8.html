@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>transform:rotate()</title>
+	<script>
+	function scale(obj){
+		//alert("test");
+		let v = document.frm.v.value;
+		//alert(v);
+		obj.style.transform ="scale("+v+",1)";		
+			document.frm.v.value++;	
+	}
+	</script>
+</head>
+<body>
+	<h3>클릭하면 2,3,4배로 옆으로 늘어납니다.</h3>
+	<hr/>
+	<div>
+		<form name="frm">
+		<img alt="사진" src="image/christmastree.png" width="100" height="140"  
+		onclick="scale(this)" style= "transform: scale();"/>
+		<input type ="hidden" name="v" value="2">
+		</form>
+	</div>
+</body>
+</html>

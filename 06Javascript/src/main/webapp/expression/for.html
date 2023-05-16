@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+//반복문 학습
+// 본인 이름을 10회 출력하시오
+/*
+for(let i=1 ; i<=10; i++ ){	
+	document.write(i+"<br>");
+}
+*/
+/*
+let sum = 0;   //값을 합해서 담는 변수  초기화 
+for(let i=1;i<=10;i++){
+	  sum = sum+i;	
+	  document.write("i값:"+i+"<br>");
+	  document.write("중간값 sum:"+sum+"<br>");	  
+}
+document.write("값은"+sum);
+*/
+//1에서 10까지의 수중에 홀수인값을 출력하시오
+/*
+for(let i =1; i<=10;i++){
+	
+	if (i%2 ==1){
+		document.write(i+"는 홀수입니다.");
+	}
+	
+}
+
+for(let i = 10;i<=35;i= i+5){
+document.write("<span");
+document.write(" style='font-size:"+i+"px;'>");
+document.write("안녕하세요</span>");
+}
+
+
+//1에서 100까지의 수를 while문을 통해서 출력하시오
+let a = 1;
+while(a<=100){	
+	document.write(a+"<br>");	
+	a++;
+}
+*/
+// 구구단 2단을 while문을 가지고 출력하시오
+/*
+let b  = 3;
+let c = 1;
+while(c<=9){
+	document.write(""+b+"*"+c+"="+b*c+"<br>")	
+	c++;
+}
+*/
+// 전체 구구단을 이중for문을 통해서 완성하시오 
+/*
+for (let i =2; i<=9;i++){
+	for(let j=1;j<=9;j++){		
+		document.write (i+"*"+j+"="+i*j+"<br>");		
+	}
+}
+*/
+let i = 1;
+do {
+	document.write("숫자는"+i+"<br>");
+		
+	if (i ==7){
+	//	break;    // 밑에 실행구문들은 실행하지않고 구문을 빠져나온다
+	continue;   // 밑에 실행구문들은 건너뛰고 다음 구문을 실행한다
+	}
+	i++;
+}while(i<10);
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

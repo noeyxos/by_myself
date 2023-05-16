@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+
+//빼기 함수 만들기
+function minus(){
+	let a = document.frm.var1.value;
+	let d = isNaN(a);
+	let b = document.frm.var2.value;
+	let e = isNaN(b);
+	if (e==true || d==true){
+		alert("숫자만 입력해주세요");
+		return;
+	}
+	let c = a-b;
+	alert("결과값은?"+c);
+	return c;	   //return 진행을 마치고 결과를 출력
+}
+/*
+let d = minus(10,11);
+document.write("결과값은?"+d);
+
+let yn = isNaN("1");   //내장되어있는 전역함수
+if (yn== true){
+document.write("숫자아님");
+}else{
+document.write("숫자임");	
+}
+*/
+</script>
+
+<form name="frm" action="./function.html" method="post"> 
+<input type="text" name="var1" >
+<input type="text" name="var2" >
+<input type="button" name="btn" value="버튼"  onclick="minus();">
+<input type="submit" name="submit" value="확인">
+</form>
+
+</body>
+</html>

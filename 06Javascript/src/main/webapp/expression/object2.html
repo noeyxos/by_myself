@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function callName(){
+	//alert("작동이 되나요?");	
+	var mySpan = document.getElementById("mySpan");
+	mySpan.style.color="red";
+	mySpan.style.fontSize = "30px";	
+	return;
+}
+function callJob(){
+	let myP = document.getElementById("myP");
+	myP.innerHTML ="제 직업은 개발자입니다";	
+	return;
+}
+function callImage(){	
+	myP.innerHTML ="<img src='https://ssl.pstatic.net/melona/libs/1406/1406489/ddb5a2490d90f03c8bcb_20230126170854001.jpg'>";	
+	return;
+}
+
+function callP(){
+	let ptag = document.getElementsByTagName("p");
+	let ptagCnt  = ptag.length;
+	alert("p태그 개수는"+ptagCnt);
+	return;
+}
+function callFood(){
+	//alert("test");
+	let food = document.getElementsByClassName("food");
+	for(let i =0; i<food.length;i++){
+		food[i].style.color ="red";		
+	}	
+	return ;
+}
+//먼저실행이 되어서 찾을수가 없다
+//let word = document.getElementsByClassName("word");
+//alert(word);
+//word.style.cssText = "background-color:red";
+function clicked(){
+	alert("클릭");
+	
+	 let word = document.getElementsByClassName("word");   //ClassName()는 여러개를 담을수 있는 집합체
+	 alert(word[0].style.visibility);
+	 if (word[0].style.visibility == "" || word[0].style.visibility =="visible"){
+		word[0].style.visibility ="hidden";
+	}else{
+		word[0].style.visibility ="visible";
+	}
+}
+
+</script>
+</head>
+<body>
+
+<!--  스판태크의 값과 크기를 변경하는 문제--> 
+
+<p id="myP">안녕하세요 제 이름은<span id="mySpan" style="color:blue;"><b>홍길동</b></span>입니다.
+</p>
+<input type="button" name="btn" id="btn" value="이름색상을 변경합니다." onclick="callName();">
+<input type="button" name="btn2" id="btn2" value="직업은 무엇인가요?" onclick="callJob();">
+<input type="button" name="btn3" id="btn3" value="사진을 보여주세요" onclick="callImage();">
+<input type="button" name="btn4" id="btn4" value="버튼색상을 변경합니다." onclick="this.style.backgroundColor='orange'">
+<input type="button" name="btn5" id="btn5" value="p객체는 몇개?" onclick="callP();">
+
+<!--  버튼을 클릭했을때 과일이름의 색상이 오렌지 색상으로 변경되는 프로그램을 작성하시오 -->
+<input type="button" name="btn6" id="btn6" value="과일 색상바꾸기" onclick="callFood();">
+
+
+<hr>
+저는<span class="food">포도</span>를 좋아하고 <br>
+<span class="food">토마토</span>는 매일 먹습니다.<br>
+<span class="food">양배추</span>는 좋아하지 않지만 건강을 위해서 매일 먹습니다. <br>
+<span class="food">사과</span>도 매일 하나씩 먹지요<br>
+<span class="food">배</span>도 매일 하나씩 먹지요<br>
+<span class="food">바나나</span>도 매일 하나씩 먹지요<br>
+
+문제 3<br>
+<input type="button" name="btn7" id="btn7"  value="show/hide" onclick="clicked();"> 
+I (<span class="word">love</span>) you
+
+
+
+</body>
+</html>

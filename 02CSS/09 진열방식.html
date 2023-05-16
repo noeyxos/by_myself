@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>09 진열방식</title>
+		<style>
+			.tag{border:1px solid #000; width:200px; height:100px; margin:0;}
+			
+			.block{display:inline;}
+			.inline{display:none;}	/*진열하지 않음*/
+			
+			#parent{border:10px solid #f00;}
+			
+			#parent span{border:3px solid #00f; 
+				margin-left:10px; margin-right:10px; 
+				margin-top:100px; margin-bottom:100px;
+				padding:30px 20px;}
+				
+			#parent.box{display:inline-block; margin:0; 
+			padding:10px;}
+			
+			#parent.image{margin:0; padding:0; display:inline-block; line-height:200px;}
+			
+			
+			img{width:100px;}
+		</style>
+	</head>
+	<body>
+		<!--블록태그-->
+		<div class="block tag">영역태그</div>
+		<h1 class="block tag">제목태그</h1>
+		<p class="block tag">단락태그</p>
+		
+		<!--인라인태그-->
+		<span class="inline tag">영역태그</span><em class="inline tag">강조태그</em>
+		안녕하세요.텍스트입력<a class="inline tag">링크태그</a>
+		
+		<hr/>
+		<div id="parent">
+			<span>인라인태그</span>
+			<span class="box">인라인태그</span>
+			<span class="image"><img src="../산.jpg"></span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>10 블록요소 수평정렬</title>
+	<style>
+		div{width:80; border:5px solid #f00;}
+		
+		p{width:100px; height:100px; margin:0; border:5px solid #000; background:#ccc;
+		font-size:30px; text-transform:uppercase;}
+		
+		#box1{text-align:center;}
+		#box1 p{display:inline;}
+		
+		#box2{text-align:right;}
+		#box2 p{display:inline-block;}
+		#box2 .f{width:150px; height:150px;}
+		#box2 .g{font-size:60px;}
+		
+		#box3 {display:inline-block;} 
+		#box3 .i{float:left; background:#fcc;} 
+		#box3 .j{float:left; width:150px; height:150px;} 
+		#box3 .k{float:left;} 
+		#box3 .l{float:left; background:#fcc;}
+
+		#box3 .m{width:200px; height:200px; background:#ccf; clear:both;}	
+	</style>
+	</head>
+	<body>
+		<h1>블록요소<br/>수평정렬</h1>
+		<hr/>
+		<div id="box1">
+			<p>a</p>
+			<p>b</p><br/>
+			<p>c</p><p>d</p>
+		</div>
+		<hr/>
+		<div id="box2">
+			<p>e</p>
+			<p class="f">f</p>
+			<p class="g">g</p><p>h</p>
+		</div>
+		<hr/>
+		<div id="box3">
+			<p class="i">i</p>
+			<p class="j">j</p>
+			<p class="k">k</p>
+			<p class="l">l</p>
+			<p class="m">m</p>
+		</div>
+		<hr/>
+	</body>
+</html>

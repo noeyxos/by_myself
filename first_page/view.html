@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글 보기</title>
+    <style>
+        #notice{border-left:3px solid #000; padding-left: 10px;}
+        table{width: 100%;  border-top: 1px solid #444444;
+        border-collapse: collapse; white-space:pre-wrap;
+        table-layout:fixed;
+        } 
+        table caption{display: none;}
+        table thead th:nth-child(odd){background: #e4e4e4;}
+        th, td {border-bottom: 1px solid #444444; padding: 10px;}
+
+        .button{float: right; margin-top: 20px; }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="notice"><h2>공지사항</h2></div>
+    <hr/>
+    <table>
+        <caption>게시글 내용</caption>
+        <thead>
+            <tr>
+                <th style="width:10%;">작성자</th>
+                <th style="width:30%;">전략기획실  Daniel J.</th>
+                <th style="width:10%;">등록일</th>
+                <th style="width:20%;">2008-07-15</th>
+                <th style="width:10%;">조회수</th>
+                <th style="width:20%;">1022</th>
+            </tr>
+            <tr>
+                <th>제목</th>
+                <th colspan="5">서비스 1방에서 알립니다.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="5">
+                    <p>서비스 1방이 개편확장 되었습니다.</p>
+                    <p>.</p>
+                    <p>.</p>
+                    <p>.</p>
+                    <p>.</p>
+                    <p>감사합니다.</p>
+                </td>                
+            </tr>
+        </tbody>
+    </table>
+    <div class="button">
+        <input type="button" value="삭제"/>
+        <input type="button" value="수정"/>
+        <input type="button" value="목록"/>      
+    </div>    
+    </body>
+</html>

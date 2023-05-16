@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글 목록</title>
+    <style>
+        #notice{border-left:3px solid #000; padding-left: 10px;}
+        #search{border: 1px solid #0e0e0e; float: right; width: 500px; flex-wrap: wrap; border-radius: 20px;}
+        #search h4{display: inline-block; box-sizing: border-box;}
+
+        #top{display: inline-block; margin-top: 20px; width: 100%; vertical-align: bottom;}
+        #top #regis{float: right; width:100px; padding:10px 30px;}
+        
+        table{width: 100%;  border-top: 1px solid #444444;
+        border-collapse: collapse;  table-layout:fixed;
+        text-align: center;}
+   
+        table tr:nth-child(1){background: #e4e4e4;}
+        th, td {border-bottom: 1px solid #444444; padding: 10px;}
+        #page_number{text-align:center;}
+    </style>
+</head>
+<body>
+    <div id="notice"><h2>공지사항</h2></div>
+    <hr/>
+        <div id="search">
+            <h4>검색</h4>
+            <select>
+                <option>전체</option>
+            </select>
+            <label for="sear"></label>
+                <input id="sear" type="search"/>
+                <input type="button" value="검색"/>
+        </div> 
+        <div id="top">
+            <p>-총 **건이 조회 되었습니다.</p>
+            <div id="regis"><input type="button" value="등록"/></div>
+        </div>
+        <table>
+            <caption></caption><!--표의 제목이나 간략하게 설명-->
+            <colgroup><!--열의 그룹화(다수생성가능)-->
+                <col span="1" class="No"/><!--첫번째 열-->
+                <col span="1" class="title"/><!--두번째 열-->
+                <col span="1" class="name"/><!--세번째 열-->
+                <col span="1" class="date"/><!--네번째 열-->
+                <col span="1" class="hits"/><!--다섯번째 열-->
+                <!--※열별로 표현할 수 있는 스타일은 너비와 배경정도 뿐-->
+            </colgroup>
+            <thead> <!--제목행 반드시 있어야함-->
+                <tr>
+                    <th style="width:5%;">No</th>
+                    <th style="width:50%;">제목</th>
+                    <th style="width:15%;">작성자</th>
+                    <th style="width:15%;">등록일</th>
+                    <th style="width:10%;">조회수</th>
+                </tr>
+            </thead>            
+            <tbody> <!--데이터행의 그룹-->
+                <tr>
+                    <td>10</td>
+                    <td style="text-align: left;"><p>공지5</p></td> 
+                    <td><P>전략기획실 Daniel J.</P></td> 
+                    <td>2008-05-01</td> 
+                    <td>1090</td> 
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td style="text-align: left;"><p>공지4</p></td> 
+                    <td></td> 
+                    <td>2008-05-01</td> 
+                    <td>995</td> 
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td style="text-align: left;"><p>공지3</p></td> 
+                    <td></td> 
+                    <td>2008-05-01</td> 
+                    <td>483</td> 
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td style="text-align: left;"><p>공지2</p></td> 
+                    <td></td> 
+                    <td>2008-05-01</td> 
+                    <td>338</td>  
+                </tr>
+                <tr>
+                    <td colspan="5">. .</td>
+                    
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td style="text-align: left;"><p>공지1</p></td> 
+                    <td></td> 
+                    <td>2008-05-01</td> 
+                    <td>16</td> 
+                </tr>
+            </tbody>
+        </table>
+   <div>
+    <p id="page_number">[처음] ◀ [1] [2] <b>[3]</b> [4] [5] [6] [7] [8] [9] [10] ▶ [마지막]</p>
+   </div>
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>11 float영역 인식시키기</title>
+	<style>
+		/*복수대상*/
+		#a,#b,#c{
+			width:80px; height:80px; background:#ccc;
+			border:1px solid #000; float:left;/*수평정렬*/
+		}
+		
+		#parent{
+			border:10px solid #f00; background:#ffc; 
+			clear:both; /*선행되는 float영향을 지우면,인식할 수 있다*/
+			height:100px; /*강제적으로 높이값을 부여*/
+		}
+		
+		#parent div{
+			width:100px; height:100px;
+			float:left;/*수평정렬*/		
+			
+		}
+		
+		#child1{background:#0f0;}
+		#child2{background:#0ff;}
+		#child3{background:#00f;}
+	</style>
+	</head>
+	<body>
+		<div id="a"></div>
+		<div id="b"></div>
+		<div id="c"></div>
+		
+		
+		<div id="parent">
+			<div id="child1"></div>
+			<div id="child2"></div>
+			<div id="child3"></div>
+		</div>	
+	</body>	
+</html>

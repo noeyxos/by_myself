@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+//html문서가 다 로딩되면 그때 시작한다
+$(document).ready(function(){
+//형식
+//	$("선택자").함수();	
+/*	$("p").on("click", function(){
+		alert("클릭했습니다.");
+		$("p").css("color","red");
+		$("p").css("font-size","28px");
+	});
+	*/
+	$("#aaa").on("click", function(){
+		alert("id 클릭");		
+	});
+	
+	$(".bbb").on("click", function(){
+		
+		$(".bbb").css("color","blue");
+	});
+	$("#7").on("click",function(){
+		$("#7").attr("src","spade-A.png")	//attr : 속성
+	})
+
+
+});
+</script>
+</head>
+<body>
+<p id="aaa">안녕하세요</p>
+<span class="bbb">반갑습니다.</span>
+<span class="bbb">오늘도 좋은하루.</span>
+<img id="7" src="spade-7.png" width="200" height="200"/>
+
+</body>
+</html>

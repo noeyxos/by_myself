@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>05 박스의 구성.html</title>
+		<style>
+		.box{width:200px; height:100px; border:10px solid #000; background:#ffc;}
+		
+		img{width:200px; height:100px;}
+		
+		/*margin과 padding은 작성법이 동일하다*/
+		.aa{padding:20px;}
+		.dd{clear:both;}
+		
+		.bb{
+			float:left;
+			margin-top:-30px; /*분할하여 작성 가능*/
+			margin-left:0;
+			margin-right:50px;
+			margin-bottom:200px;
+			}
+		
+		.cc{
+			float:left;
+			padding:20px 40px 60px 80px;}
+		/*
+			padding:값;---4방향 모두 적용
+			padding:값1 값2;---값1:위아래, 값2:좌우
+			padding:값1 값2 값3;---값1:위아래, 값2:좌우, 값3:아래
+			padding:값1 값2 값3 값4;---시계방향순으로 적용됨.	
+		*/
+						
+		</style>
+	</head>
+	<body>
+		<div class="box aa">박스</div>
+		<div class="box bb">박스</div>
+		<div class="box cc"><img src="../산.jpg"/></div>
+		<div class="box dd">박스</div>
+		
+	</body>
+</html>

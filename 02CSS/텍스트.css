@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+h1{
+	color:#f00; /*글자색상*/
+	background:#ccf; /*배경색*/
+	text-align:center; /*글자정렬*/
+	/*:left;(기본값-왼쪽정렬),:right;(오른쪽정렬),:center;(가운데정렬),:justify;(양쪽정렬)*/
+	width:420px; /*너비*/
+	letter-spacing:-10px; /*글자사이간격(자간)*/
+
+	/*
+	단축속성(축약속성)
+	font:[스타일] [굵기] [글자크기]/[행높이] [글자체];
+	*/
+	font:italic normal 40px/80px "궁서";
+}
+		
+div{
+	width:400px;
+	border:10px solid #000;
+	text-align:justify;
+	font-family:"Arial","궁서"; /*글자체(폰트)*/
+	/*여러개의 폰트를 설정하면, 차순위를 두는 것으로 앞에서부터 순차적으로 
+	적용된다. 해당폰트가 없거나, 해당언어를 지원하지 않으면, 다음 작성된
+	폰트가 적용된다.*/
+	font-size:20px; /*글자크기*/
+	line-height:40px; /*행높이(=줄간격)*/	
+	text-indent:30px; /*들여쓰기or내어쓰기*/
+}
+	
+strong{
+	color:#f00;
+	font-weight:normal; /*글자굵기(:bold;=굵게)*/
+	font-style:italic; /*글자기울리기*/
+	text-transform:uppercase; 
+	/*:uppercase;(모두대문자), :lowercase;(모두소문자), :capitalize;(각 단어의 첫글자만 대문자)*/
+	text-decoration:underline;
+	/*:underline;(밑줄), :overline;(윗줄), :line-through;(취소선)*/
+}
+
+em{
+	color:#00f;
+	font-style:normal;
+	font-weight:bold;
+	text-transform:capitalize;
+	text-decoration:overline;
+}

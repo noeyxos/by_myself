@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+/*리셋코드*/
+*{margin:0; padding:0;}
+li{list-style:none;}
+img,iframe{vertical-align:top;}
+
+/*문서공통*/
+body{font-family:'Noto Sans KR','Malgun Gothic',sans-serif;}
+
+.clearfix::after{content:''; display:block; clear:both;}
+
+/*상단영역*/
+header{width:1200px; margin:0 auto;}
+header .seoul{height:48px; border-bottom:1px solid #e4e9f0;}
+	#seoul_logo{float:left; margin-right:75px;}
+	#seoul_notice{float:left;}
+	#seoul_menu{float:right;}
+	#seoul_menu li{float:left;}
+header .inner{height:38px; padding:31px 0;
+	border-bottom:1px solid #e4e9f0;}
+	#logo{float:left; margin-right:160px;}
+	#gnb{float:left; font-size:0;}
+	#gnb li{display:inline-block;}
+	#member{float:right;}
+	#member li{float:left;}
+
+/*중앙영역*/
+main{width:1200px; margin:0 auto; }
+main .container{height:562px; padding-top:50px;
+	background:url("images/bg.png") center/cover no-repeat;}
+
+	#title{float:left;}
+	#title h1{font-size:36px; color:#fff; margin-bottom:20px;}
+	#title p{font-size:16px; color:#c5dbff;}
+
+	#data{float:right; margin-bottom:45px;}
+	#data p{margin-bottom:30px;}
+	#data dl{float:left; text-align:center; width:160px;}
+	#data dl:nth-child(3){width:188px;
+		border-left:1px dashed #c5dbff;
+		border-right:1px dashed #c5dbff;}
+	#data dt{font-size:16px; color:#c5dbff;}
+	#data dd{font-size:34px; color:#fff; font-family:"Roboto";
+		font-weight:bold; letter-spacing:-1px;}
+
+	#icon{float:left;}
+	#main_banner{float:right;}	
+
+	#board1{float:left; margin:40px 0 50px;}
+	#board2{float:right; margin:40px 0 50px;}
+	
+	#data_banner{background:#e3eaf4; clear:both; padding:60px 0;
+		font-size:0; margin-bottom:70px;}
+	#data_banner li{display:inline-block;}	
+
+	#notice{float:left;}
+	#etc{float:right; width:580px;}
+	#etc p{float:left;}
+	#etc p:first-child{margin-right:10px;}
+	#etc p:last-child{margin-top:10px;}
+
+/*하단영역*/
+footer{clear:both; width:1200px; margin:70px auto 0;
+	background:#505256; padding-bottom:30px;}
+footer .bottom{background:#434547; padding:12px 0;
+	margin-bottom:25px;}
+	#btm_menu{float:left;}
+	#btm_menu li{float:left;}
+	#jump_menu{float:right;}
+	#btm_logo{float:left;}
+	#btm_info{float:left; margin-left:35px;}

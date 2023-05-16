@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+//자바스크립트 core객체 사용하기
+
+//날짜 객체
+let today = new Date();		//객체생성
+let today_time = today.toLocaleString();			//객체안에 있는 함수중에 시간값을 만들어내는 함수
+
+document.write("현재시간은?"+today_time+"<br/>");
+
+let str = new String("안녕하세요.홍길동입니다.");		//문자열 객체
+let str_length = str.length;
+document.write("문자길이는?"+str_length);
+
+
+//도시 이름을 담는 변수가 여러개일 경우 변수 여러개는 만들지 않고 하나의 배열변수를 만든다
+
+let cities = ["서울","대전","대구","부산","전주"];
+document.write(cities[0]+"<br/>")
+//let cityName = cities[]; 
+
+
+
+let car = new Array();		// car 배열 객체를 생성한다 
+car[0] = "그랜저";
+car[1] = "소나타";
+car[2] = "아반떼";
+
+let carName = car[1];
+document.write("차이름은?"+carName+"<br/>");
+
+
+
+//배열을 활용해서 1에서 1000까지의 합을 구하세요.
+
+let su = new Array();		//su 배열 객체를 생성한다.
+for(let i =0; i <=10; i++){		//배열방 10개에 각각 숫자를 담는다
+	su[i] = i+1;
+}
+
+let sum = 0;
+for(let  i = 0; i<10; i++){
+	sum = sum + su[i];			
+}
+document.write("합은?"+sum+"<br/>");
+
+//Date 객체를 활용해서 오늘 날짜를 출력하시오
+let now =new Date();
+let date =now.getDate();
+document.write("오늘 날짜는?"+date+"<br/>");
+
+
+//접속한 시간이 짝수 초이면 보라색, 홀수 초이면 하늘색을 가지는 홈페이지를 만들어주세요.
+let current = new Date();
+if(current.getSeconds() % 2 == 0)
+	document.body.style.backgroundColor = "violet";
+else
+	document.body.style.backgroundColor = "lightskyblue";
+
+
+document.write("현재 시간 : ");
+document.write(current.getHours(), "시,");
+document.write(current.getMinutes(), "분,");
+document.write(current.getSeconds(), "초<br/>");
+
+
+//0~99 랜덤출력하는 함수
+function ran(){	
+	for(let i = 0; i<10; i++){
+		let m = Math.random()*100;
+		let n = Math.floor(m);
+		document.write("랜덤값은?"+n+"<br/>");
+	}
+}
+ran();
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

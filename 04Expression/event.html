@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p onmouseover="this.style.backgroundColor='orchid'"
+	onmouseout="this.style.backgroundColor='white'">
+	마우스를 올리면 색상이 변해요</p>
+	
+<p id="p">
+마우스를 올리면 경고창이 뜹니다.
+</p>	
+
+<p id="p2">리스너를 활용해서 띄웁니다.</p>
+
+<p id="p3">이벤트 리스너로 이벤트 전달</p>
+
+<script>
+function over(){
+		alert("알림창이 뜹니다.");
+
+	}
+let p = document.getElementById("p")
+//p.onmouseover = over;		//p이름을 가진 객체의 이벤트리스너를 동작시켜 함수 over와 연결한다. ()괄호는 안씀
+p.onmouseover = function(){
+	alert("익명함수로 알림창을 띄웁니다.");
+}
+
+let p2 = document.getElementById("p2");
+//p2.addEventListener("mouseover",over);	//이벤트 감지기함수를 통해서 작동함수와 연결시켜준다
+p2.addEventListener("mouseover",function(){
+	alert("익명함수로 알림창을 띄웁니다.");
+});
+
+function f(e){	//(e)생략불가..		
+	alert("안녕하세요");
+	alert("이벤트의 종류는?"+e.type);
+
+}
+
+let p3 = document.getElementById("p3");
+//alert(p3);
+p3.onmouseover = f;
+
+
+function calculate(){
+	let exp = document.getElementById("exp");
+	let result = document.getElementById("result");
+	result.value = eval(exp.value);
+}
+</script>
+<button onclick="f(event);">이벤트 객체 전달 클릭</button>
+
+<a href="http://naver.com" onclick="return false;">네이버 가기</a>
+
+<a href="http://naver.com" onclick="event.preventDefault()">네이버 가기</a>
+
+
+<h3>onclick,  계산기 만들기</h3>
+<hr/>
+계산하고자 하는 수식을 입력하고 계산 버튼을 눌러봐요.
+<br><br>
+<form>
+식 <input type="text" id="exp" value=""><br>
+값 <input type="text" id="result">
+<input type="button" value=" 계산 "
+	onclick="calculate()" >
+</form>
+
+
+<img onmousemove="where(event);" 
+src="image/christmastree.png" width="200"  height="200">
+<div id ="div"></div>
+<script>
+function where(e){
+	//alert("스크린 x좌표"+e.screenX);
+	//alert("스크린 y좌표"+e.screenY);
+	let text = "스크린x좌표"+e.screenX+"<br>스크린 y좌표"+e.screenY;
+	
+	let div = document.getElementById("div");
+	div.innerHTML = text;
+	return;		
+}
+</script>
+
+<script>
+function checkFilled(obj){
+	if (obj.value == ""){
+		obj.focus();
+	}
+}
+</script>
+
+<h3>onfocus와 onblur</h3>
+<hr/>
+<p>이름을 입력하지 않고 다른 창으로 이동할 수 없습니다.</p>
+<form>
+이름 <input type="text" id="name" onblur="checkFilled(this)"><p>
+학번 <input type="text">
+</form>
+
+<script>
+function aa(obj){
+	if(obj.checked)
+		alert(obj.id+"을 선택하였습니다.")
+}
+</script>
+<h3>체크박스로 선택한 물품</h3>
+<hr/>
+<form>
+10000<input type="checkbox" id="10000" onclick="aa(this)">
+20000<input type="checkbox" id="20000" onclick="aa(this)">
+30000<input type="checkbox" id="30000" onclick="aa(this)">
+</form>
+
+
+
+
+</body>
+</html>

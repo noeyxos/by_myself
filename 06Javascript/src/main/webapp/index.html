@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+//document.write("안녕하세요");
+//alert("경고창이 뜹니다.");
+
+//var a =1;    // = 대입하다는 뜻
+//document.write("변수a값은?"+a);
+
+var x = 1;
+var x = 2;   // 또 선언했음
+//alert("var타입의 변수 x의 값은?"+ x);
+
+let y = 1;
+//let y = 3;   //이미 선언했는데 let타입은 재선언할수 없다
+y=3;
+//alert("let타입의 변수y의 값은"+y);
+
+const z = 1;
+//z= 4;   //상의 값을 새로 담을수가 없다
+
+//alert("const타입의 변수z의 값은"+z);
+
+k=1;
+//alert("k값은?"+k);
+// 위변수는 전역적으로  활요하기때문에 전역변수라 불린다
+function test(){
+	var h =1;     //지역변수
+	alert("지역변수 h는"+h);
+	alert("전역변수x 는"+x);
+	let p = 1;
+	alert("지역변수 p는"+p);
+	alert("전역변수 y는"+y);
+	return	;
+}
+
+test();
+//alert("변수 h는"+h);
+//alert("변수 p는"+p);
+
+
+
+
+</script>
+
+</body>
+</html>

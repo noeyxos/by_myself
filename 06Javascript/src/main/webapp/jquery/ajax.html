@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	$("#btn2").on("click",function(){
+		let memberId = $("#memberId").val();
+		
+		//ajax 비동기 통신하기
+		$.ajax({
+		url: "json2.jsp",		
+		method: "POST",
+		data: {"memberId": memberId },
+		dataType: "json",
+		success : function(data){
+		//	alert("데이터 받기 성공");
+		//	alert(data.이름);
+	//	let name = data.이름;
+	//	let age  = data.나이;
+	//	let job = data.직업;
+	//	let str = "이름은"+name+" 나이는"+age+" 직업은"+job+"입니다.";
+		let memberId = data.memberId;
+	    alert(memberId);
+		//$("#sss").html(str);		
+		},
+		error : function(request,status,error){
+			alert("다시 시도하시기 바랍니다.");
+			//alert("message:"+request.responseText);
+		}		
+		});		
+	});	
+});
+</script>
+</head>
+<body>
+<div id="sss">버튼을 클릭하면 이곳에 데이터를 출력하세요 </div>
+<button id="btn1">다른곳에 있는 데이터 가져와서 화면에 출력하기</button>
+<input type="text" id="memberId" name="memberId" >
+<button id="btn2">아이디 넘기기</button>
+
+
+
+</body>
+</html>

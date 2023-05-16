@@ -1,0 +1,16 @@
+스타일.css
+/*css 기본문법*/
+대상{속성:속성값; 속성:속성값; 속성:속성값 속성값 속성값;}
+
+body{ background:#ffffcc; }
+
+h1{background:#c9f; color:red; border:10px solid #000; }
+
+/*
+	색상코드 작성법(p176): 6개의 숫자(16진수)로 이루어진 색상코드
+	#CC99FF;= RGB색상 = 빨강:CC,녹색:99,파랑:FF
+	→#C9F; (CSS에서는 축약작성이 가능)
+*/
+
+
+/*주석*/

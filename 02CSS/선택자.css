@@ -1,0 +1,15 @@
+@charset "utf-8"; /*문서의 인코딩 정보를 표기*/
+
+/*태그셀렉터*/
+h1{color:red; border:10px solid red; background:#000;}
+div{width:400px; height:100px; border:5px solid #000;
+margin-bottom:10px; background:gray;}
+
+/*아이디셀렉터*/
+#a{background:#fcc;}
+#b{background:#cfc;}
+#c{background:#ccf;}
+
+/*클래스셀렉터*/
+.ab{border-color:#00f; color:#00f; font-weight:bold;}
+.bc{font-size:30px; text-align:right;}

@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+/*리셋코드*/
+*{margin:0; padding:0;}
+li{list-style:none;}
+img{vertical-align:top;}
+
+body{font-family: 'Noto Sans KR', sans-serif;}
+/*dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+dd{margin-inline-start: 40px;} */
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;   }
+
+/*상단영역*/
+header{width:1440px; height:165px; padding-top:15px; margin:0 auto;}
+header .top{height:100px; border-top:0;}
+    #util{float: right;}
+    #util li{display:inline-block; border-top: 3px solid #000; }
+    #util li:last-child{margin:0 20px;}
+    #sns{float: right; font-size:0; border-top: 3px solid #000; margin-left: 3px;}
+    #sns li{display:inline-block; }
+    #logo{clear:both; float: left; margin-top:28px;}
+    #gnb{float: left; vertical-align: bottom; margin:50px 0 0 92px;}
+    #gnb li{display:inline-block;}
+    #login{float:right; font-size:0; margin-top:50px;}
+    #login li{display: inline-block; }
+   
+    
+/*중앙영역*/
+main{width:1440px; margin:35px auto 80px;}    
+    #main_view{width:1440px; height:627px; margin:80px 0;}
+
+ main .container{margin-top: 38px; font-size: 0;}
+    #inform{display: inline-block; padding: 12px 0 35px;
+        width:1139px; border-bottom: 3px solid #000;
+        vertical-align: bottom; font-size: 18px;
+        color: #222;}
+    #inform dl:first-child{margin-bottom: 15px;}
+    #inform dt{font-size: 24px; font-weight: bold;}
+    #inform dt,#inform dd{display: inline-block; vertical-align: middle; }
+    #info img{vertical-align:sub; margin-right:8px;}
+	#info strong{font-weight:bold; margin:0 15px;}	
+    #link_menu{display: inline-block; vertical-align: bottom;}
+    #link_menu li{float: left; margin-left: 20px;}
+
+        
+    #content{margin-top: 70px;}
+    #content h3{font-size: 46px; margin-bottom: 30px;}
+    #content .list > li{float: left; width: 315px; margin-right: 60px; margin-bottom: 70px;}
+    #content .list > li:last-child(margin-right: 0;) 
+    #content .list img{width: 100%;}
+    #content .list ul{margin: 30px 0 18px; font-size: 16px;}
+    #content .list ul li{display: inline-block; padding:4px 14px; border: 1px solid #000; color: #202020;}
+    #content .list ul li:firsth-child{background : #000; color: #fff;}
+    #content .list h4{font-size: 18px; color: #222; margin-bottom:15px;}
+    #content .list h4+p{font-size: 16px; color: #666;}
+   
+    #notice{clear:both; margin-bottom: 70px;}
+    #notice h3{font-size: 46px; margin-bottom: 42px;}
+    #notice h3 img{vertical-align: middle;}
+    #notice .board{float: left; padding-bottom: 20px; border-bottom: 1px solid #000;}
+    #notice .board p{border-bottom: 1px solid #000;}
+    #notice .board table{width:694px; border-collapse:collapse;
+    line-height:58px; font-size:18px;}
+    #notice .board caption,
+    #notice .board thead{display:none;}
+    #notice .board td:nth-child(1){width:589px; padding-left:10px;
+        font-weight:bold;}	
+    #notice .board td:nth-child(1)::before{content:''; display:inline-block;
+        width:6px; height:6px; border-radius:50%; background:#222;
+        margin-right:8px; vertical-align:4px;}	
+    #notice .board td:nth-child(2){width:95px; text-align:right;
+        color:#7c7c7c;}
+    #notice .banner{float:right;}
+
+    #edu{float:left; width:26%;}
+    #event{float:left; width:20.5%; margin:0 3.5%;}	
+    #online{float:left; width:46.5%;}
+    .items h3{font-size:30px; margin-bottom:30px;}
+    .items img{width:100%;}
+    .items p:nth-child(3){margin:40px 0 20px;}
+    .items strong{font-size:24px; letter-spacing:-1.5px; line-height:32px;}
+    .items span{font-size:18px; margin-top:20px;}
+
+
+footer{width:1440px; margin:0 auto; padding-bottom:55px;}	
+footer .menu{padding:75px 0 60px; border-top:1px solid #c8c8c8;
+    border-bottom:1px solid #e6e6e6; margin-bottom:55px;}
+footer .link-box{float:left; width:25%;}
+footer .ex li{font-size:18px; margin-bottom:20px;}
+footer .site li{margin:0 0 25px 19px; border-bottom:2px solid #000;
+    width:214px; padding:12px 0; font-size:16px; 
+    background:url("images/open.png") 96% center/22px 12px no-repeat;}
+footer .foot li{color:#444; line-height: 30px;}	
+footer .foot li:first-child{font-weight:bold;}
+footer .right-box{float:right; text-align:right;}
+footer .right-box address{margin:25px 0 20px; font-size:15px; color:#444;
+    line-height:30px; font-style:normal;}

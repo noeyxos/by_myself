@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판 제작 프로젝트</title>
+    <style>
+        #parent{position: relative;}
+        #tab{position: absolute; top: 100%; left: 30%;}
+        .flex-center{justify-content: center;}
+        table{border: 1px solid #444444;
+        border-collapse: collapse; white-space: pre-wrap;
+        width: 40%;
+        }
+        table caption{display: none;}
+        table thead th:nth-child(odd){background: #e4e4e4;}
+        th, td {border: 1px solid #444444; padding: 10px;}
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <table id="tab">
+            <caption style="text-align:center">게시판 제작 프로젝트</caption>
+            <thead>
+                <tr>
+                    <th colspan="2">게시판 제작 프로젝트</th>
+                </tr>
+            </thead>
+            <tbody style="text-align:center">
+                <tr>
+                    <td>글목록</td>
+                    <td><a href="list.html">list.jsp</a></td>
+                </tr>
+                <tr>
+                    <td>글쓰기</td>
+                    <td><a href="write.html">write.jsp</a></td>
+                </tr>
+                <tr>
+                    <td>글보기</td>
+                    <td><a href="view.html">view.jsp</a></td>
+                </tr>
+                <tr>
+                    <td>글수정</td>
+                    <td><a href="view.html">modify.jsp</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+       
+</body>
+</html>

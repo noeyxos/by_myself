@@ -1,0 +1,27 @@
+[참고사이트]
+(1)MDN:https://developer.mozilla.org/ko/
+(2)w3schools:https://www.w3schools.com/
+
+[추가 CSS 스타일]
+■ box-sizing:크기조절의 기준 변경
+	:content-box;-(기본값)content영역이 크기조절됨.
+	:border-box; -border영역까지 크기조절됨.
+	
+■ white-space:백색공간 처리 방식 지정
+※백색공간(white-space):보이지 않는 문자들-공백문자,개행문자,탭문자..
+	:normal;(기본값)-자동줄바꿈됨/
+					개행문자, 공백문자, 탭문자 병합됨(하나의 공백이 됨.)
+	:nowrap; 자동줄바꿈이 되지않음. 나머지는 normal과 같음.
+	:pre; 자동줄바꿈이 되지않음. 
+		개행문자, 공백문자, 탭문자등이 유지됨(페이지에 표현이 됨)
+※그 외, pre-wrap,pre-line,break-space는 나중에 따로 살펴볼 것
+
+■ overflow:넘치는 영역 처리하기
+	:visible;-(기본값)넘치는 영역을 그대로 표현함.
+	:hidden;-넘치는 영역을 숨김.
+	:scroll;-스크롤 막대 영역을 오른쪽과 아래에 생성함.
+	:auto;-넘치는 경우에만 스크롤 막대 영역을 생성함.
+	
+■ text-overflow:overflow의 hidden값에 의해 텍스트가 숨겨진 경우, 표시방법
+	:clip;-(기본값)텍스트가 영역만큼만 표현되고,넘치는 부분은 잘려서 표현됨.
+	:ellipsis;-숨겨진 텍스트가 있는 경우, 말줄임표(…)로 표현된다.

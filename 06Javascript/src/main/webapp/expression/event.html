@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p 
+onmouseover="this.style.backgroundColor='orchid'" 
+onmouseout="this.style.backgroundColor='white'">
+마우스를 올리면 색상이 변해요</p>
+
+<p id="p">
+마우스를 올리면 경고창이 뜹니다.
+</p>
+
+<p id="p2">리스너를 활용해서 띄웁니다.</p>
+
+<p id="p3">이벤트 리스너로 이벤트 전달</p>
+<script>
+/*
+function over(){
+alert("알림창이 뜹니다.");		
+}
+let p  = document.getElementById("p");
+//p.onmouseover = over;    //p이름을 가진 객체의 이벤트리스너를 동작시켜 함수 over와 연결한다
+p.onmouseover =function(){  
+	alert("익명함수로 알림창을 띄웁니다");
+};
+let p2  = document.getElementById("p2");
+//p2.addEventListener("mouseover",over);   //이벤트 감지기함수를 통해서 작동함수와 연결시켜준다
+p2.addEventListener("mouseover",function(){
+	alert("이벤트 리스너 익명함수로 알림창을 띄웁니다");
+});
+
+function f(e){
+	alert("안녕하세요");
+	alert("이벤트의 종류는?"+e.type);
+}
+*/
+let p3 = document.getElementById("p3");	
+//alert(p3);
+p3.onmouseover = f;
+</script>
+<button onclick="f(event);" >이벤트 객체 전달 클릭</button>
+
+<a href="http://naver.com" onclick="return false;">네이버 가기</a>
+
+<a href="http://naver.com" onclick="event.preventDefault()">네이버 가기</a>
+
+<img onmousemove="where(event);" 
+src='https://ssl.pstatic.net/melona/libs/1406/1406489/ddb5a2490d90f03c8bcb_20230126170854001.jpg'>
+<div id="div2"></div>
+<script>
+function where(e){
+	//alert("스크린 x좌표"+e.screenX);
+	//alert("스크린 y좌표"+e.screenY);
+	let text = "스크린x좌표"+e.screenX+"<br>스크린y좌표"+e.screenY;
+	let div2 = document.getElementById("div2");
+	div2.innerHTML = text;
+	return;
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

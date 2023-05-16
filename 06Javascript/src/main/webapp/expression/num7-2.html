@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>이미지가 회전하는 웹페이지</title>
+	<script>
+		function rotate(obj){
+			//alert("test");
+			let v = document.frm.v.value;
+			//alert(v);
+			obj.style.transform ="rotate("+v+"deg)";		
+				document.frm.v.value = parseInt(v)+90;	
+		}
+	</script>
+</head>
+<body>
+	<h3>클릭하면 90도 회전합니다.</h3>
+	<hr/>
+	<div>
+		<form name="frm">
+		<img alt="사진" src="image/christmastree.png" width="100" height="140"  
+		onclick="rotate(this)" style= "transform: rotate(0deg);"/>
+		<input type ="hidden" name="v" value="90">
+		</form>
+	</div>
+</body>
+</html>

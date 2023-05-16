@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+let x = 0;   //변수 선언 및 초기화
+let y = 0;
+let z = 0;
+
+x= 1;
+y=10;
+
+//더하기 
+z= x+y;
+document.write("합은"+z);
+z=x-y;
+document.write("차는"+z);
+z=x*y;
+document.write("곱은"+z);
+z=x/y;
+document.write("몫은"+z);
+//증감연산자
+z = ++x;   //선증가후대입
+document.write("증가한 값은"+z);
+z = x++;  //선대입후증가
+document.write("증가한 값은"+z);
+
+//비교연산자
+z = (x>y);
+document.write("z값은"+z);
+
+// 변수 a는 1이고 변수 b는 2입니다 변수 c는 3이고 변수 d는 4입니다.   
+//a곱하기 b는 c곱하기d보다 큰지 작은지 확인하세요
+let a = 1;
+document.write("a값은"+a+"<br>");
+let b = 2;
+let c = 3;
+let d = 4;
+
+let e = a*b;
+let f = c*d;
+let g  = (e>f);
+document.write("g값은"+g+"<br>");
+
+//논리연산자 true false
+//  &&  그리고 
+//   ||  또는
+//   !반대
+
+let score = 200;
+let age= 10;
+
+let value =  (score<100) && (age>20);    //둘다  참이면  참 나머지는 거짓
+document.write("value:"+value+"<br>");
+
+value =  (score<100) || (age<20);         // 둘중에 하나라도 참이면 참
+document.write("value:"+value+"<br>");
+
+//조건 연산
+//삼항연산식
+let aa = 1;
+let bb = 2;
+
+let cc = (aa>bb ? "a가 b보다 큽니다." : "a가 b보다 작습니다.")
+document.write(cc+"<br>");
+
+//변수 j는 3 이고 변수 k는 6입니다.
+// j와 k의 합이  10보다 크면 "10보다 큽니다."라고 출력하고 10보다 작으면 "작습니다"라고
+//출력하시오
+let j = 3;
+let k = 6;
+let l = j+k;
+let m = (l>10 ? "10보다 큽니다.": "10보다 작습니다.");
+document.write(m);
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

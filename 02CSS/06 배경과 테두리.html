@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>06 배경과 테두리</title>
+	<style>
+	body{
+		height:3000px;
+		background-color:#cff;	/*배경색상*/
+		background-image:url("../01HTML/트리.jpg");	/*배경이미지*/
+		background-repeat:no-repeat;
+		/*	:repeat; -반복(기본값),:no-repeat; -반복하지않음,
+			:repeat-x;-수평반복 :repeat-y;-수직반복
+		*/
+		background-position:center 100px; /*위치: 수평위치 수직위치*/
+		/* 수치(px), 비율값(%), top, left, right, bottom, center등의 
+			값을 입력하여 표현
+		*/
+		background-size:20% auto; /*크기조절:너비 높이*/
+		/*
+			:수치(px)수치(px);
+			:비율값(%); 표시영역의 크기에 비례하여 적용됨.
+			:auto; 원본이미지의 비율에 비례하여 크기조절됨.
+			:cover; 이미지 비율을 유지한 채, 영역을 다 채우는 최소한의 크기
+			:contain; 이미지 비율을 유지한 채, 이미지가 모두 표시될 최대한의 크기
+		*/
+			
+		background-attachment:fixed;	/*배치방법*/
+		/*	
+			:scroll; (기본값) 화면에 맞추어 스크롤되어 이동함.
+			:fixed; 화면에 고정됨.
+			:local; 내부영역 스크롤이 생겼을 때, 내부영역에 따라 스크롤됨.
+		*/
+			
+		/*
+			[추가 배경 스타일]
+			background-clip, background-origin
+			해당스타일은 나중에 따로 학습할 것
+		*/
+		
+		/*
+			■단축속성(축약속성)
+			background:[색상] url("주소") [수평위치] [수직위치]/[너비] [높이] [반복여부] [배치];
+		*/
+		
+		background:#ffc url("../산.jpg") center top/400px auto no-repeat fixed;
+		
+		h1{width:400px; height:400px;
+			background:#cfc; margin:50px 100px;}
+			
+			/*테두리:속성별로 분할 작성*/
+			border-width:20px; /*선의 너비(두께)*/
+			border-style:dotted; /*선의 스타일(p187)*/
+			border-color:#f00; /*선의 색상*/
+			
+			/*테두리:단축속성*/
+			border:30px dashed #00f; /*너비 스타일 색상*/
+			
+			/*테두리:위치별로 분할작성*/
+			border-top:10px solid #000;
+			border-left:20px solid #f00;
+			border-right:30px solid #0f0;
+			border-bottom:40px solid #00f;
+			
+			/*테두리:위치-속성 별로 분할작성*/
+			border-top-width:30px;
+			border-left-color:#fcc;
+			border-bottom-style:double;
+			
+			/*둥근모서리 설정(p189)*/
+			border-radius:50px;
+			
+			/*분할 작성 가능 - 잘 사용안함.*/
+			border-top-left-radius:100px;
+			
+			/*외곽선*/
+			outline:20px solid #ff0;
+			/*
+				-테두리보다 바깥에 생성됨.
+				-크기에 영향을 주지않는다.
+				-위치별로 분할할 수 없다.(4방향 전체생성)
+			*/
+			
+			/*속성별로 분할작성 가능*/
+			outline-width:10px;
+			outline-style:solid;
+			outline-color:orange;		
+			
+	}
+	</style>
+</head>
+<body>
+	<h1>배경스타일(p195)과 테두리스타일(p187)</h1>
+</body>
+</html>

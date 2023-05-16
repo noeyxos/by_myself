@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14 상위포지션</title>
+    <style>
+        #grand{width: 600px; height: 400px;
+            background: #ccc; margin: 100px auto 0;
+            position: relative;}
+
+        #parent{width: 400px; height: 300px;
+            background: #6aa;
+            position: absolute;
+            bottom: 20px; left: 40px;}
+
+        #this{width: 20%; height: 10%;
+            background: #f00;
+            position: absolute;
+            top: 10px; right: 10px;}
+    </style>
+</head>
+<body>
+    <div id="grand">
+        <div id="parent">
+            <div id="this"></div>
+        </div>
+    </div>
+</body>
+</html>
